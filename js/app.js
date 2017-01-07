@@ -1,28 +1,55 @@
 /*jshint eversion:6*/
-let questionReq = new XMLHttpRequest();
-questionReq.addEventListener('load', questionReqListener);
-questionReq.open('GET', './data/tmp.json');
-questionReq.send();
 
 let module = function() {
 
-  function addMult() {
+  function reqHandler() {
+    let data = JSON.parse(this.responseText);
+    data = data.results
+      console.log(data);
+    for(let i = 0; i < data.length; i++) {
+      checkType(data[i]);
+    }
+  }
+
+  function requestData() {
+    let questionReq = new XMLHttpRequest();
+    questionReq.addEventListener('load', reqHandler);
+    questionReq.open('GET','./data/tmp.json');
+    questionReq.send();
 
   }
 
-  function addTrueFalse() {
+  function checkType(data) {
+    switch(data.type) {
+      case 'multiple':
+        addMult(data);
+        break;
+
+      case 'boolean':
+        addTrueFalse(data);
+        break;
+
+      case 'open':
+      default:
+        addOpen(data);
+    }
+  }
+
+  function addMult(data) {
 
   }
 
-  function addCheckbox() {
+  function addTrueFalse(data) {
 
   }
 
-  function addOpen() {
+
+  function addOpen(data) {
 
   }
 
   return {
+    requestData,
     addMult,
     addTrueFalse,
     addCheckbox,
@@ -31,4 +58,5 @@ let module = function() {
 
 };
 
-module();
+let app = module();
+app.requestData();
