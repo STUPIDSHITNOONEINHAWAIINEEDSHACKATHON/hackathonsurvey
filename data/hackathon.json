@@ -13,6 +13,11 @@
 			]
 		}, {
 			"category": "Hackathon",
+			"type": "open",
+			"difficulty": "medium",
+			"question": "What is your name?"
+		}, {
+			"category": "Hackathon",
 			"type": "boolean",
 			"difficulty": "easy",
 			"question": "This is your first hackathon?",
@@ -31,17 +36,12 @@
 				"It was ok",
 				"Terrible. Just terrible."
 			]
-		},
-
-		{
+		}, {
 			"category": "Hackathon",
 			"type": "open",
 			"difficulty": "medium",
 			"question": "What was your favorite aspect of the hackathon?"
-		},
-
-
-		{
+		}, {
 			"category": "Hackathon",
 			"type": "multiple",
 			"difficulty": "medium",
@@ -134,7 +134,59 @@
 			"incorrect_answers": [
 				"Mantis",
 				"Koala",
-				"rattlesnake"
+				"Rattlesnake"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "If you were to provide this Hackathon a spirit animal it would be:",
+			"correct_answer": "Gorilla",
+			"incorrect_answers": [
+				"Kangaroo",
+				"Komodo Dragon",
+				"Lemur"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is best in life?",
+			"correct_answer": "To crush your enemies",
+			"incorrect_answers": [
+				"See them driven before you",
+				"Hear the lamentation of their women",
+				"Cheetos"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "You are stranded on a deserted island with your hackathon team. Who do you eat first?",
+			"correct_answer": "Alex",
+			"incorrect_answers": [
+				"Caity",
+				"Matt",
+				"Gina",
+				"Jay",
+				"Estefania",
+				"Joe",
+				"Marifel",
+				"Lisa",
+				"Nick",
+				"Nakaz"
+
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "The key to a loving and caring relationship is:",
+			"correct_answer": "Sean Nakamura",
+			"incorrect_answers": [
+				"Communication",
+				"Caring",
+				"Practice"
 			]
 		}
 	]
