@@ -2,6 +2,7 @@
 
 let module = function() {
 
+
   function reqHandler() {
     let data = JSON.parse(this.responseText);
     data = data.results
@@ -39,6 +40,7 @@ let module = function() {
 
   }
 
+
   function addTrueFalse(data) {
 
   }
@@ -52,11 +54,13 @@ let module = function() {
     requestData,
     addMult,
     addTrueFalse,
-    addCheckbox,
     addOpen,
   }
 
 };
 
-let app = module();
+
+
+const app = module();
+
 app.requestData();

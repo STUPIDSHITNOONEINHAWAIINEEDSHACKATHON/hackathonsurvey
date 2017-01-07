@@ -1,0 +1,2 @@
+/*jshint eversion:6*/
+
