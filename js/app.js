@@ -1,4 +1,5 @@
 /*jshint eversion:6*/
+let form = document.getElementById('form');
 
 let form = document.getElementById('form');
 
@@ -44,19 +45,33 @@ let module = function() {
      return array;
   }
 
+<<<<<<< HEAD
  function addMult(data) {
+=======
+  function addMult(data) {
+>>>>>>> 0bbfc25d1698592579378e1b63ee0204fb38dc0d
     let multDiv = document.createElement('div');
     multDiv.classList.add('div-mult');
     let label = document.createElement('label');
     label.classList.add('label-mult');
     label.innerHTML = data.question;
     let optionsDiv = document.createElement('div');
+<<<<<<< HEAD
     for(let i = 0; i < data.incorrect_answers.length; i++) {
+=======
+    let answers = randomizeCorrectAns(data.incorrect_answers, data.correct_answer);
+
+    for(let i = 0; i < answers.length; i++) {
+>>>>>>> 0bbfc25d1698592579378e1b63ee0204fb38dc0d
       let inputLabel = document.createElement('label');
       let input = document.createElement('input');
       let span = document.createElement('span');
       span.innerHTML = data.incorrect_answers[i];
       input.setAttribute('type', 'radio');
+<<<<<<< HEAD
+=======
+      input.setAttribute('name', 'answer');
+>>>>>>> 0bbfc25d1698592579378e1b63ee0204fb38dc0d
       inputLabel.appendChild(input);
       inputLabel.appendChild(span);
       optionsDiv.appendChild(inputLabel);
@@ -64,7 +79,10 @@ let module = function() {
     multDiv.appendChild(label);
     multDiv.appendChild(optionsDiv);
     form.appendChild(multDiv);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0bbfc25d1698592579378e1b63ee0204fb38dc0d
 
   }
 

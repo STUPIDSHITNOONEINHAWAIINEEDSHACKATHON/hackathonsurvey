@@ -15,6 +15,12 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/STUPIDSHITNOONEINHAWAIINEEDSHACKATHON/the-official-hackathon-survey/issues"
-  },
+  },"xo": {
+      "esnext": true,
+      "space": true,
+      "globals": [
+        "window"
+      ]
+    }
   "homepage": "https://github.com/STUPIDSHITNOONEINHAWAIINEEDSHACKATHON/the-official-hackathon-survey#readme"
 }
