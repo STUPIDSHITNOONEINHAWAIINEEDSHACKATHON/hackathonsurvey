@@ -52,7 +52,6 @@ let module = function() {
     requestData,
     addMult,
     addTrueFalse,
-    addCheckbox,
     addOpen,
   }
 
