@@ -1,5 +1,7 @@
 /*jshint eversion:6*/
 
+let form = document.getElementById('form');
+
 let module = function() {
 
 
@@ -36,17 +38,79 @@ let module = function() {
     }
   }
 
-  function addMult(data) {
+  function randomizeCorrectAns(array, correctAns){
+     let index = Math.floor(Math.random() * (array.length + 1))
+     array.splice(index, 0, correctAns);
+     return array;
+  }
+
+ function addMult(data) {
+    let multDiv = document.createElement('div');
+    multDiv.classList.add('div-mult');
+    let label = document.createElement('label');
+    label.classList.add('label-mult');
+    label.innerHTML = data.question;
+    let optionsDiv = document.createElement('div');
+    for(let i = 0; i < data.incorrect_answers.length; i++) {
+      let inputLabel = document.createElement('label');
+      let input = document.createElement('input');
+      let span = document.createElement('span');
+      span.innerHTML = data.incorrect_answers[i];
+      input.setAttribute('type', 'radio');
+      inputLabel.appendChild(input);
+      inputLabel.appendChild(span);
+      optionsDiv.appendChild(inputLabel);
+    }
+    multDiv.appendChild(label);
+    multDiv.appendChild(optionsDiv);
+    form.appendChild(multDiv);
+
 
   }
 
 
   function addTrueFalse(data) {
+    let array = data.incorrect_answers;
+    array.splice(1, 0, data.correct_answer);
+
+    let boolDiv = document.createElement('div');
+    boolDiv.classList.add('div-bool');
+    let label = document.createElement('label');
+    label.classList.add('label-bool');
+    label.innerHTML = data.question;
+    let optionsDiv = document.createElement('div');
+    
+
+    for(let i = 0; i < data.incorrect_answers.length; i++) {
+      let inputLabel = document.createElement('label');
+      let input = document.createElement('input');
+      let span = document.createElement('span');
+      span.innerHTML = data.incorrect_answers[i];
+      input.setAttribute('type', 'radio');
+      input.setAttribute('name', 'button');
+      inputLabel.appendChild(input);
+      inputLabel.appendChild(span);
+      optionsDiv.appendChild(inputLabel);
+    }
+
+
+    boolDiv.appendChild(label);
+    boolDiv.appendChild(optionsDiv);
+    form.appendChild(boolDiv);
 
   }
 
 
   function addOpen(data) {
+    let openDiv = document.createElement('div');
+    openDiv.classList.add('div-open');
+    let label = document.createElement('label');
+    label.classList.add('labe-open');
+    label.innerHTML = data.question;
+    let input = document.createElement('input');
+    input.setAttribute('type', 'text');
+    inputLabel.appendChild(input);
+    openDiv.appendChild(inputLabel);
 
   }
 
