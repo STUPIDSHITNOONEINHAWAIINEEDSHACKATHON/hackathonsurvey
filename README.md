@@ -1,4 +1,4 @@
-The Official Survey of the Stupid Shit Hackathon.
+# The Official Survey of the Stupid Shit Hackathon.
 
 Resources:
 - Open Trivia Database API: https://opentdb.com/browse.php
