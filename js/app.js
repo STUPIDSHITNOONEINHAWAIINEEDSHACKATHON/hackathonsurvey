@@ -19,7 +19,8 @@ let module = function() {
     data = data.results;
     console.log(data);
     for(let i = 0; i < data.length; i++){
-      checkType(data[i]);
+      let index = i;
+      checkType(data[i], index);
     }
   }
 
@@ -30,22 +31,22 @@ let module = function() {
     questionReq.send();
   }
 
-  
 
 
-  function checkType(data) {
+
+  function checkType(data, index) {
     switch(data.type) {
       case 'multiple':
-        addMult(data);
+        addMult(data, index);
         break;
 
       case 'boolean':
-        addTrueFalse(data);
+        addTrueFalse(data, index);
         break;
 
       case 'open':
       default:
-        addOpen(data);
+        addOpen(data, index);
     }
   }
 
@@ -56,7 +57,7 @@ let module = function() {
   }
 
 
-  function addMult(data) {
+  function addMult(data, index) {
     let multDiv = document.createElement('div');
     multDiv.classList.add('div-mult');
     let label = document.createElement('label');
@@ -72,8 +73,7 @@ let module = function() {
       let span = document.createElement('span');
       span.innerHTML = data.incorrect_answers[i];
       input.setAttribute('type', 'radio');
-
-      input.setAttribute('name', 'answer');
+      input.setAttribute('name', `answer${index}`);
       inputLabel.appendChild(input);
       inputLabel.appendChild(span);
       optionsDiv.appendChild(inputLabel);
@@ -85,7 +85,7 @@ let module = function() {
   }
 
 
-  function addTrueFalse(data) {
+  function addTrueFalse(data, index) {
     let array = data.incorrect_answers;
     array.splice(1, 0, data.correct_answer);
 
@@ -103,7 +103,7 @@ let module = function() {
       let span = document.createElement('span');
       span.innerHTML = data.incorrect_answers[i];
       input.setAttribute('type', 'radio');
-      input.setAttribute('name', 'button');
+      input.setAttribute('name', `answer${index}`);
       inputLabel.appendChild(input);
       inputLabel.appendChild(span);
       optionsDiv.appendChild(inputLabel);
