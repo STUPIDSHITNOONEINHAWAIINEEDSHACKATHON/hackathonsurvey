@@ -5,17 +5,50 @@ let btn = document.getElementById('nextBtn');
 
 let module = function() {
 
-  let colorIndex = 0;
+  let colorIndex = 0; // 0 to 9
   let startQ = 0;
   let endQ = 5;
   let totalQ = 0;
   let questions;
     let questionsLeft = 20;
 
-
   btn.addEventListener('click', addBtnListener);
 
-  let colors = ['#9EFF36', '#85C1E9', '#FA5BA5', '#42B983', '#E6834A', '#9373C1', '#00B8A9', '#FF0000', '#FFF700'];
+  const colors = ['#9EFF36', '#85C1E9', '#FA5BA5', '#42B983', '#E6834A', '#9373C1', '#00B8A9', '#FF0000', '#FFF700'];
+  const audioFiles = [
+    'Blip_Select.wav',
+    'Blip_Select2.wav',
+    'Blip_Select3.wav',
+    'Blip_Select4.wav',
+    'Explosion7.wav',
+    'Explosion15.wav',
+    'Explosion16.wav',
+    'Hit_Hurt.wav',
+    'Hit_Hurt46.wav',
+    'Jump.wav',
+    'Jump2.wav',
+    'Jump3.wav',
+    'Jump4.wav',
+    'Jump5.wav',
+    'Laser_Shoot17.wav',
+    'Laser_Shoot18.wav',
+    'Laser_Shoot22.wav',
+    'Laser_Shoot23.wav',
+    'Laser_Shoot24.wav',
+    'Laser_Shoot25.wav',
+    'Pickup_Coin.wav',
+    'Pickup_Coin2.wav',
+    'Pickup_Coin3.wav',
+    'Pickup_Coin4.wav',
+    'Pickup_Coin5.wav',
+    'Pickup_Coin18.wav',
+    'Pickup_Coin19.wav',
+    'Pickup_Coin20.wav',
+    'Powerup.wav',
+    'Powerup11.wav',
+    'Powerup12.wav',
+    'Powerup13.wav'
+  ];
 
 
 
@@ -41,7 +74,13 @@ let module = function() {
 
     let nodeList = document.querySelector('section:last-child');
     let height = nodeList.offsetTop;
-    window.scrollTo(0, height)
+
+    window.scrollTo(0, height);
+
+    const audioPath = '../assets/audio/';
+    const audioIndex = Math.floor(Math.random() * 32); // 0 to 31
+    const audio = new Audio(`${audioPath}${audioFiles[audioIndex]}`);
+    audio.play();
 
   }
   function processData(data) {
