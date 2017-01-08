@@ -117,17 +117,6 @@
 			"category": "Hackathon",
 			"type": "multiple",
 			"difficulty": "easy",
-			"question": "How far would you travel for a Hackathon if first place was $5,000?",
-			"correct_answer": "30+ miles",
-			"incorrect_answers": [
-				"10-29 miles",
-				"1-9 miles",
-				"Walking distance"
-			]
-		},  {
-			"category": "Hackathon",
-			"type": "multiple",
-			"difficulty": "easy",
 			"question": "What did you accomplish at this hackathon?",
 			"correct_answer": "Time Travel",
 			"incorrect_answers": [
@@ -293,6 +282,39 @@
 				"FAKA WHAT",
 				"DIS FAKA?",
 				"Further inquiry required"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is love?",
+			"correct_answer": "Matthew Tengasantos" , 
+			"incorrect_answers": [
+				"An emotion that defines the weakness of the meat that we call humans",
+				"Baby don't hurt me",
+				"Bread"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "The Earth is:",
+			"correct_answer": "A pokeball" , 
+			"incorrect_answers": [
+				"Flat",
+				"6,000 years old",
+				"A holographic construct"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "Did you complain about not getting free pizza?:",
+			"correct_answer": "Of course not. I'm a decent human being that appreciates the effort of those that planned this." , 
+			"incorrect_answers": [
+				"YES! I'M ENTITLED TO FREE SHIT!",
+				"There was free pizza???",
+				"I complain about everything."
 			]
 		}
 ]
