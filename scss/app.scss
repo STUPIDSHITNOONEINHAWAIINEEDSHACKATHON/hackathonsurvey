@@ -7,6 +7,7 @@
   margin: auto;
   padding: 5rem 0;
 
+  text-align: center;
 }
 
 #section01{
@@ -38,16 +39,23 @@
   color: $whiteText;
 
 }
-
+.div-mult, .div-bool, .div-open {
+  padding: 4rem 0;
+}
 .label-mult, .label-bool, .label-open {
   color: $whiteText;
   font-family: 'DropDead';
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   font-size: 2rem;
+}
+label {
+  display: inline-block;
+  padding: 0 2rem;
 }
 label > span {
   // color: $darkGrey;
-  color: #fff;
+  padding: 0.5rem 0;
+  color: $darkGrey;
   text-transform: uppercase;
   font-family: 'Lato';
   font-size: 1.5rem;

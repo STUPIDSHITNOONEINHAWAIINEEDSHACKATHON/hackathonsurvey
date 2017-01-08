@@ -53,7 +53,8 @@ table {
 .container {
   max-width: 45em;
   margin: auto;
-  padding: 5rem 0; }
+  padding: 5rem 0;
+  text-align: center; }
 
 #section01 {
   background: #FF0000; }
@@ -79,14 +80,22 @@ table {
   text-align: center;
   color: #fff; }
 
+.div-mult, .div-bool, .div-open {
+  padding: 4rem 0; }
+
 .label-mult, .label-bool, .label-open {
   color: #fff;
   font-family: 'DropDead';
-  padding-bottom: 1rem;
+  padding-bottom: 1.5rem;
   font-size: 2rem; }
 
+label {
+  display: inline-block;
+  padding: 0 2rem; }
+
 label > span {
-  color: #fff;
+  padding: 0.5rem 0;
+  color: #303030;
   text-transform: uppercase;
   font-family: 'Lato';
   font-size: 1.5rem;
