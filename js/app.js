@@ -13,7 +13,7 @@ let module = function() {
 
   btn.addEventListener('click', addBtnListener);
 
-  let colors = ['#9EFF36', '#303030', '#FA5BA5', '#42B983', '#E6834A', '#9373C1', '#00B8A9', '#FF0000']
+  let colors = ['#9EFF36', '#85C1E9', '#FA5BA5', '#42B983', '#E6834A', '#9373C1', '#00B8A9', '#FF0000', '#FFF700'];
 
   function addBtnListener(event) {
     event.preventDefault();
@@ -23,10 +23,11 @@ let module = function() {
       endQ = totalQ;
     }
     colorIndex++;
-    processData(questions);
-    if(colorIndex > 9) {
+    if(colorIndex >= 9) {
       colorIndex = 0;
     }
+    // console.log(colorIndex);
+    processData(questions);
   }
   function processData(data) {
     let section = document.createElement('section');
