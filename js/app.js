@@ -2,6 +2,7 @@
 let form = document.getElementById('content');
 let btn = document.getElementById('nextBtn');
 
+
 let module = function() {
 
   let colorIndex = 0;
@@ -21,7 +22,7 @@ let module = function() {
   function addBtnListener(event) {
     event.preventDefault();
     startQ = endQ;
-    endQ += Math.floor(Math.random() * 10);
+    endQ += Math.floor(Math.random() * 10 + 1);
     if(endQ > totalQ) {
       endQ = totalQ;
     }
@@ -29,13 +30,18 @@ let module = function() {
     if(colorIndex >= 9) {
       colorIndex = 0;
     }
-    // console.log(colorIndex);
     processData(questions);
+
 
     questionsLeft += Math.floor(Math.random() *100+1);
     let qsLeft = document.getElementById('numbers');
     qsLeft.innerHTML = `Questions Left: ${questionsLeft}`;
 
+
+
+    let nodeList = document.querySelector('section:last-child');
+    let height = nodeList.offsetTop;
+    window.scrollTo(0, height)
 
   }
   function processData(data) {
