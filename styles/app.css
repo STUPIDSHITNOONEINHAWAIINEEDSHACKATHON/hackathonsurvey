@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+@import url("https://fonts.googleapis.com/css?family=Lato");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -44,3 +45,33 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+@font-face {
+  font-family: 'DropDead';
+  src: url("../assets/fonts/DKDropDeadGorgeous.otf") format("opentype"); }
+
+.container {
+  max-width: 45em;
+  margin: auto;
+  padding: 5rem 0; }
+
+#section01 {
+  background: #FF0000; }
+  #section01 img {
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 4rem 0; }
+  #section01 h1 {
+    text-align: center;
+    font-family: 'DropDead';
+    color: #9EFF36;
+    font-size: 6.25rem; }
+  #section01 h2 {
+    padding: 2rem 0 0 0;
+    text-align: center;
+    font-family: 'DropDead';
+    color: #000;
+    font-size: 1.5rem; }
+
+#intro-questions {
+  background: #303030; }
