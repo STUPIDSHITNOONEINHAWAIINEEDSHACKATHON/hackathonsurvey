@@ -65,7 +65,7 @@ let module = function() {
     let height = nodeList.offsetTop;
     window.scrollTo(0, height);
 
-    const audioPath = '../assets/audio/';
+    const audioPath = './assets/audio/';
     const audioIndex = Math.floor(Math.random() * 32); // 0 to 31
     const audio = new Audio(`${audioPath}${audioFiles[audioIndex]}`);
     audio.play();
