@@ -309,12 +309,23 @@
 			"category": "Hackathon",
 			"type": "multiple",
 			"difficulty": "easy",
-			"question": "Did you complain about not getting free pizza?:",
+			"question": "Did you complain about not getting free pizza?",
 			"correct_answer": "Of course not. I'm a decent human being that appreciates the effort of those that planned this." , 
 			"incorrect_answers": [
 				"YES! I'M ENTITLED TO FREE SHIT!",
 				"There was free pizza???",
 				"I complain about everything."
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What conference are you most looking forward to?",
+			"correct_answer": "Burrito Conf" , 
+			"incorrect_answers": [
+				"Manapua Conf",
+				"Agent Conf",
+				"Chain React 2017"
 			]
 		}
 ]
