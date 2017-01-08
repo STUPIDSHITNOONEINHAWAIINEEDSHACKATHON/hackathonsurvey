@@ -10,6 +10,7 @@ let module = function() {
   let endQ = 5;
   let totalQ = 0;
   let questions;
+    let questionsLeft = 20;
 
   btn.addEventListener('click', addBtnListener);
 
@@ -49,6 +50,8 @@ let module = function() {
     'Powerup13.wav'
   ];
 
+
+
   function addBtnListener(event) {
     event.preventDefault();
     startQ = endQ;
@@ -61,14 +64,24 @@ let module = function() {
       colorIndex = 0;
     }
     processData(questions);
+
+
+    questionsLeft += Math.floor(Math.random() *100+1);
+    let qsLeft = document.getElementById('numbers');
+    qsLeft.innerHTML = `Questions Left: ${questionsLeft}`;
+
+
+
     let nodeList = document.querySelector('section:last-child');
     let height = nodeList.offsetTop;
+
     window.scrollTo(0, height);
 
     const audioPath = './assets/audio/';
     const audioIndex = Math.floor(Math.random() * 32); // 0 to 31
     const audio = new Audio(`${audioPath}${audioFiles[audioIndex]}`);
     audio.play();
+
   }
   function processData(data) {
     let section = document.createElement('section');

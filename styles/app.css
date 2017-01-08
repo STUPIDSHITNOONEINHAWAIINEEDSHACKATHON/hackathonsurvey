@@ -135,3 +135,13 @@ label > span {
     background: yellow; }
   100% {
     background: blue; } }
+
+#numbers {
+  position: fixed;
+  z-index: 100;
+  top: 30px;
+  left: 100px;
+  background-color: white;
+  font-family: "DropDead";
+  font-size: 50px;
+  padding: 5px 5px 10px 5px; }
