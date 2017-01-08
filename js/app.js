@@ -5,22 +5,33 @@ let form = document.getElementById('form');
 let module = function() {
 
 
-  function reqHandler() {
+  // function reqHandler() {
+  //   let data = JSON.parse(this.responseText);
+  //   data = data.results;
+  //     console.log(data);
+  //   for(let i = 0; i < data.length; i++) {
+  //     checkType(data[i]);
+  //   }
+  // }
+
+  function hackReqHandler(){
     let data = JSON.parse(this.responseText);
-    data = data.results
-      console.log(data);
-    for(let i = 0; i < data.length; i++) {
+    data = data.results;
+    console.log(data);
+    for(let i = 0; i < data.length; i++){
       checkType(data[i]);
     }
   }
 
-  function requestData() {
+  function requestData(endpoint) {
     let questionReq = new XMLHttpRequest();
-    questionReq.addEventListener('load', reqHandler);
-    questionReq.open('GET','./data/tmp.json');
+    questionReq.addEventListener('load', hackReqHandler);
+    questionReq.open('GET', endpoint);
     questionReq.send();
-
   }
+
+  
+
 
   function checkType(data) {
     switch(data.type) {
@@ -113,9 +124,11 @@ let module = function() {
     label.classList.add('labe-open');
     label.innerHTML = data.question;
     let input = document.createElement('input');
+    let inputLabel = document.createElement('label');
     input.setAttribute('type', 'text');
     inputLabel.appendChild(input);
     openDiv.appendChild(inputLabel);
+    form.appendChild(openDiv);
 
   }
 
@@ -132,4 +145,5 @@ let module = function() {
 
 const app = module();
 
-app.requestData();
+app.requestData( './data/tmp.json');
+app.requestData( './data/hackathon.json');
