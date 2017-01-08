@@ -1,27 +1,44 @@
 /*jshint eversion:6*/
 
-let form = document.getElementById('form');
+let form = document.getElementById('content');
+let btn = document.getElementById('nextBtn');
 
 let module = function() {
 
+  let startQ = 0;
+  let endQ = 5;
+  let totalQ = 0;
+  let questions;
 
-  // function reqHandler() {
-  //   let data = JSON.parse(this.responseText);
-  //   data = data.results;
-  //     console.log(data);
-  //   for(let i = 0; i < data.length; i++) {
-  //     checkType(data[i]);
-  //   }
-  // }
+  btn.addEventListener('click', addBtnListener);
+
+
+  function addBtnListener(event) {
+    event.preventDefault();
+    startQ = endQ;
+    endQ += 5;
+    if(endQ > totalQ) {
+      endQ = totalQ;
+    }
+    processData(questions)
+  }
+
+  function processData(data){
+    for(let i = startQ; i < endQ; i++){
+      let index = i;
+      checkType(data[i], index);
+    }
+  }
+
 
   function hackReqHandler(){
     let data = JSON.parse(this.responseText);
     data = data.results;
-    console.log(data);
-    for(let i = 0; i < data.length; i++){
-      let index = i;
-      checkType(data[i], index);
-    }
+    questions = data;
+    totalQ = data.length;
+    console.log(endQ, totalQ);
+    processData(data);
+
   }
 
   function requestData(endpoint) {
@@ -30,8 +47,6 @@ let module = function() {
     questionReq.open('GET', endpoint);
     questionReq.send();
   }
-
-
 
 
   function checkType(data, index) {
@@ -142,5 +157,5 @@ let module = function() {
 
 const app = module();
 
-app.requestData( './data/tmp.json');
+// app.requestData( './data/tmp.json');
 app.requestData( './data/hackathon.json');
