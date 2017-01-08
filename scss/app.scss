@@ -31,6 +31,29 @@
   }
 }
 
+.section-header {
+  font-family: 'DropDead';
+  font-size: 4rem;
+  text-align: center;
+  color: $whiteText;
+
+}
+
+.label-mult, .label-bool, .label-open {
+  color: $whiteText;
+  font-family: 'DropDead';
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+label > span {
+  // color: $darkGrey;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-size: 1.5rem;
+  display: block;
+}
+
 #intro-questions{
   background: $darkGrey;
 }

@@ -73,5 +73,24 @@ table {
     color: #000;
     font-size: 1.5rem; }
 
+.section-header {
+  font-family: 'DropDead';
+  font-size: 4rem;
+  text-align: center;
+  color: #fff; }
+
+.label-mult, .label-bool, .label-open {
+  color: #fff;
+  font-family: 'DropDead';
+  padding-bottom: 1rem;
+  font-size: 2rem; }
+
+label > span {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Lato';
+  font-size: 1.5rem;
+  display: block; }
+
 #intro-questions {
   background: #303030; }
