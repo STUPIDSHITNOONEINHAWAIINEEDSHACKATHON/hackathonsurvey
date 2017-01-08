@@ -143,5 +143,7 @@ let module = function() {
   }
 };
 const app = module();
-// app.requestData( './data/tmp.json');
-app.requestData( './data/hackathon.json');
+
+
+app.requestData( './data/tmp.json');
+
