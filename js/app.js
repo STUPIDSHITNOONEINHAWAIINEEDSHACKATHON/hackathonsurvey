@@ -9,11 +9,14 @@ let module = function() {
   let endQ = 5;
   let totalQ = 0;
   let questions;
+    let questionsLeft = 20;
 
 
   btn.addEventListener('click', addBtnListener);
 
   let colors = ['#9EFF36', '#85C1E9', '#FA5BA5', '#42B983', '#E6834A', '#9373C1', '#00B8A9', '#FF0000', '#FFF700'];
+
+
 
   function addBtnListener(event) {
     event.preventDefault();
@@ -28,6 +31,12 @@ let module = function() {
     }
     // console.log(colorIndex);
     processData(questions);
+
+    questionsLeft += Math.floor(Math.random() *100+1);
+    let qsLeft = document.getElementById('numbers');
+    qsLeft.innerHTML = `Questions Left: ${questionsLeft}`;
+
+
   }
   function processData(data) {
     let section = document.createElement('section');
