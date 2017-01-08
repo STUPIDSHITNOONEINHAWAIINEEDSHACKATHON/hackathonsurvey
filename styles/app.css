@@ -112,8 +112,26 @@ label > span {
   overflow: hidden;
   font-family: 'DropDead';
   border-radius: none;
-  transform: all 2s ease; }
+  animation: blinkbutton 2s ease infinite;
+  background: green; }
+
+@keyframes blinkbutton {
+  33% {
+    background: red; }
+  66% {
+    background: yellow; }
+  100% {
+    background: blue; } }
   .submit-section button:hover {
     color: #9EFF36;
     font-size: 1rem;
-    background: #FF0000; }
+    background: #FF0000;
+    animation: blinkbuttonhover 0.5s ease infinite; }
+
+@keyframes blinkbuttonhover {
+  33% {
+    background: red; }
+  66% {
+    background: yellow; }
+  100% {
+    background: blue; } }

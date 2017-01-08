@@ -74,11 +74,35 @@ label > span {
     overflow: hidden;
     font-family: 'DropDead';
     border-radius: none;
-    transform: all 2s ease;
+    animation: blinkbutton 2s ease infinite;
+    background: green;
+    @keyframes blinkbutton {
+      33% {
+        background: red;
+      }
+      66% {
+        background: yellow;
+      }
+      100%{
+        background:blue;
+      }
+    }
     &:hover {
       color: $brightGreen;
       font-size: 1rem;
       background: $brightRed;
+      animation: blinkbuttonhover 0.5s ease infinite;
+      @keyframes blinkbuttonhover {
+      33% {
+        background: red;
+      }
+      66% {
+        background: yellow;
+      }
+      100%{
+        background:blue;
+      }
+    }
     }
   }
 }
