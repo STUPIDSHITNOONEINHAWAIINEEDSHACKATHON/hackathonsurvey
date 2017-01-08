@@ -51,7 +51,7 @@ table {
   src: url("../assets/fonts/DKDropDeadGorgeous.otf") format("opentype"); }
 
 .container {
-  max-width: 45em;
+  max-width: 80%;
   margin: auto;
   padding: 5rem 0;
   text-align: center; }
