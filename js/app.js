@@ -119,13 +119,12 @@ let module = function() {
     let openDiv = document.createElement('div');
     openDiv.classList.add('div-open');
     let label = document.createElement('label');
-    label.classList.add('labe-open');
+    label.classList.add('label-open');
     label.innerHTML = data.question;
     let input = document.createElement('input');
-    let inputLabel = document.createElement('label');
     input.setAttribute('type', 'text');
-    inputLabel.appendChild(input);
-    openDiv.appendChild(inputLabel);
+    openDiv.appendChild(label);
+    openDiv.appendChild(input);
     form.appendChild(openDiv);
 
   }
