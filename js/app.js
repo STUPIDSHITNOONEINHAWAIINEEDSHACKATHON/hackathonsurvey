@@ -23,16 +23,26 @@ let module = function() {
       endQ = totalQ;
     }
     colorIndex++;
-    processData(questions)
+    processData(questions);
     if(colorIndex > 9) {
       colorIndex = 0;
     }
   }
-  function processData(data){
+  function processData(data) {
+    let section = document.createElement('section');
+    section.classList.add('section');
+    section.style.backgroundColor = colors[colorIndex];
+
+    let container = document.createElement('div');
+    container.classList.add('container');
+
     for(let i = startQ; i < endQ; i++){
       let index = i;
-      checkType(data[i], index);
+      checkType(data[i], index, container);
     }
+
+    section.appendChild(container);
+    form.appendChild(section);
   }
   function hackReqHandler(){
     let data = JSON.parse(this.responseText);
@@ -48,17 +58,17 @@ let module = function() {
     questionReq.open('GET', endpoint);
     questionReq.send();
   }
-  function checkType(data, index) {
+  function checkType(data, index, container) {
     switch(data.type) {
       case 'multiple':
-        addMult(data, index);
+        addMult(data, index, container);
         break;
       case 'boolean':
-        addTrueFalse(data, index);
+        addTrueFalse(data, index, container);
         break;
       case 'open':
       default:
-        addOpen(data, index);
+        addOpen(data, index, container);
     }
   }
   function randomizeCorrectAns(array, correctAns){
@@ -66,10 +76,9 @@ let module = function() {
      array.splice(index, 0, correctAns);
      return array;
   }
-  function addMult(data, index) {
+  function addMult(data, index, container) {
     let multDiv = document.createElement('div');
     multDiv.classList.add('div-mult');
-    multDiv.style.backgroundColor = colors[colorIndex];
     let label = document.createElement('label');
     label.classList.add('label-mult');
     label.innerHTML = data.question;
@@ -88,14 +97,13 @@ let module = function() {
     }
     multDiv.appendChild(label);
     multDiv.appendChild(optionsDiv);
-    form.appendChild(multDiv);
+    container.appendChild(multDiv);
   }
-  function addTrueFalse(data, index) {
+  function addTrueFalse(data, index, container) {
     let array = data.incorrect_answers;
     array.splice(1, 0, data.correct_answer);
     let boolDiv = document.createElement('div');
     boolDiv.classList.add('div-bool');
-    boolDiv.style.backgroundColor = colors[colorIndex];
     let label = document.createElement('label');
     label.classList.add('label-bool');
     label.innerHTML = data.question;
@@ -113,12 +121,11 @@ let module = function() {
     }
     boolDiv.appendChild(label);
     boolDiv.appendChild(optionsDiv);
-    form.appendChild(boolDiv);
+    container.appendChild(boolDiv);
   }
-  function addOpen(data) {
+  function addOpen(data, index, container) {
     let openDiv = document.createElement('div');
     openDiv.classList.add('div-open');
-    openDiv.style.backgroundColor = colors[colorIndex];
     let label = document.createElement('label');
     label.classList.add('label-open');
     label.innerHTML = data.question;
@@ -126,7 +133,7 @@ let module = function() {
     input.setAttribute('type', 'text');
     openDiv.appendChild(label);
     openDiv.appendChild(input);
-    form.appendChild(openDiv);
+    container.appendChild(openDiv);
   }
   return {
     requestData,
