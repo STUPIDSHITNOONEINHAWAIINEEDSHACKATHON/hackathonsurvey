@@ -65,3 +65,12 @@ label > span {
 #intro-questions{
   background: $darkGrey;
 }
+.submit-section {
+  background: $darkGrey;
+  text-align:right;
+  button {
+    font-family: 'DropDead';
+    display: inline-block;
+    border-radius: none;
+  }
+}
