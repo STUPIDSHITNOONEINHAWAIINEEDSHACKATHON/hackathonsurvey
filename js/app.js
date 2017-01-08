@@ -84,7 +84,7 @@ let module = function() {
     label.classList.add('label-bool');
     label.innerHTML = data.question;
     let optionsDiv = document.createElement('div');
-    
+
 
     for(let i = 0; i < data.incorrect_answers.length; i++) {
       let inputLabel = document.createElement('label');
@@ -97,8 +97,6 @@ let module = function() {
       inputLabel.appendChild(span);
       optionsDiv.appendChild(inputLabel);
     }
-
-
     boolDiv.appendChild(label);
     boolDiv.appendChild(optionsDiv);
     form.appendChild(boolDiv);
