@@ -13,6 +13,11 @@
 			]
 		}, {
 			"category": "Hackathon",
+			"type": "open",
+			"difficulty": "medium",
+			"question": "What is your name?"
+		}, {
+			"category": "Hackathon",
 			"type": "boolean",
 			"difficulty": "easy",
 			"question": "This is your first hackathon?",
@@ -31,17 +36,23 @@
 				"It was ok",
 				"Terrible. Just terrible."
 			]
-		},
-
-		{
+		}, {
 			"category": "Hackathon",
 			"type": "open",
 			"difficulty": "medium",
 			"question": "What was your favorite aspect of the hackathon?"
-		},
-
-
-		{
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "The key to a loving and caring relationship is:",
+			"correct_answer": "Sean Nakamura",
+			"incorrect_answers": [
+				"Communication",
+				"Caring",
+				"Practice"
+			]
+		}, {
 			"category": "Hackathon",
 			"type": "multiple",
 			"difficulty": "medium",
@@ -51,6 +62,17 @@
 				"Pretty good, but you’re not going to win any awards",
 				"Better than my cooking",
 				"YOU POISONED ME!"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "medium",
+			"question": "The correct definition of DevOps is:",
+			"correct_answer": "Jon Borgonia",
+			"incorrect_answers": [
+				"An enterprise software development phrase used to mean a type of agile relationship between Development and IT Operations",
+				"Something to do with deployments",
+				"A process to improve relationships by advocating better communication and collaboration between the business units."
 			]
 		}, {
 			"category": "Hackathon",
@@ -134,8 +156,144 @@
 			"incorrect_answers": [
 				"Mantis",
 				"Koala",
-				"rattlesnake"
+				"Rattlesnake"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "If you were to provide this Hackathon a spirit animal it would be:",
+			"correct_answer": "Gorilla",
+			"incorrect_answers": [
+				"Kangaroo",
+				"Komodo Dragon",
+				"Lemur"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is best in life?",
+			"correct_answer": "To crush your enemies",
+			"incorrect_answers": [
+				"See them driven before you",
+				"Hear the lamentation of their women",
+				"Cheetos"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "You are stranded on a deserted island with your hackathon team. Who do you eat first?",
+			"correct_answer": "Tenga",
+			"incorrect_answers": [
+				"Caity",
+				"Matt",
+				"Gina",
+				"Jay",
+				"Estefania",
+				"Joe",
+				"Marifel",
+				"Lisa",
+				"Nick",
+				"Alex",
+				"Nakaz"
+
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "There are two types of people in the world. What are they?",
+			"correct_answer": "Those that think Rick and Morty is the greatest show that has ever aired, and those who have not seen it.",
+			"incorrect_answers": [
+				"Those that view the glass as half full, and those that view the glass as half empty",
+				"Apple users and those that are wrong",
+				"Android users and those that are wrong"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the leading programming language in the world?",
+			"correct_answer": "Profanity",
+			"incorrect_answers": [
+				"Python",
+				"Javascript",
+				"Ruby",
+				"Java"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the best front end framework?",
+			"correct_answer": "RBveaJS",
+			"incorrect_answers":[
+				"ReactJS",
+				"Angular2",
+				"ViewJS"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "How old is Joe Karlsson?",
+			"correct_answer": "He is immortal and has existed before and after the construct of what we call time", 
+			"incorrect_answers": [
+				"35",
+				"41",
+				"24"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "Ray Farias is secretly",
+			"correct_answer": "A magical pug that can transform into a human with pug-like qualities", 
+			"incorrect_answers": [
+				"A guitarist",
+				"A bassist",
+				"A Developer"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "Within Jason Sewell's beard lies ancient secrets. Explore this beard and you will find:",
+			"correct_answer": "A mini Jason Sewell with another mystical beard" , 
+			"incorrect_answers": [
+				"The Borgonias",
+				"The secrets of Dev League",
+				"Fantasty Little League"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "open",
+			"difficulty": "easy",
+			"question": "How the fuck did you get this far in this survey?" 
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "Who wears short shorts?",
+			"correct_answer": "Jonathan Tan" , 
+			"incorrect_answers": [
+				"I wear short shorts",
+				"Elves",
+				"Slackbot"
+			]
+		}, {
+			"category": "Hackathon",
+			"type": "multiple",
+			"difficulty": "easy",
+			"question": "What is the correct response when being confront with a difficult coding challenge?",
+			"correct_answer": "WHAT YOU FAKA" , 
+			"incorrect_answers": [
+				"FAKA WHAT",
+				"DIS FAKA?",
+				"Further inquiry required"
 			]
 		}
-	]
+]
 }

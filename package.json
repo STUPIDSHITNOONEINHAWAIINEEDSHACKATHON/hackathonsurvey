@@ -1,10 +1,9 @@
 {
   "name": "the-official-hackathon-survey",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "./node_modules/.bin/gulp"
   },
   "repository": {
     "type": "git",
@@ -15,12 +14,19 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/STUPIDSHITNOONEINHAWAIINEEDSHACKATHON/the-official-hackathon-survey/issues"
-  },"xo": {
+  },
+  "homepage": "https://github.com/STUPIDSHITNOONEINHAWAIINEEDSHACKATHON/the-official-hackathon-survey#readme",
+  "description": "",
+  "xo": {
       "esnext": true,
       "space": true,
       "globals": [
         "window"
       ]
-    }
-  "homepage": "https://github.com/STUPIDSHITNOONEINHAWAIINEEDSHACKATHON/the-official-hackathon-survey#readme"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.0.0"
+  }
 }
